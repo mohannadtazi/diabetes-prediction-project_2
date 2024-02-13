@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diabetes Prediction Result</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static '/prediction/sugar-blood-level.png' %}" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: 100px;
+            background-color: rgb(242, 242, 242);
+        }
+        
+        .hero-section h6 {
+            margin-bottom: 20px;
+        }
+        
+        .hero-section h2 {
+            margin-bottom: 40px;
+        }
+        
+        .hero-section button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #form-section {
+            margin-top: 50px;
+        }
+        
+        .styled-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+        }
+        
+        .styled-form fieldset {
+            border: none;
+        }
+        
+        .styled-form .form-group {
+            margin-bottom: 10px;
+        }
+        
+        .styled-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .styled-form input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .styled-form .submit-button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .styled-form .submit-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .hero-section .hero-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hero-section .hero-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-section">
+        <h6>Diabetes Prediction Result</h6>
+        <h2>Result: {{ result }}</h2>
+        <a href="{% url 'index' %}" class="hero-button">Predict Again</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!-- FILEPATH: /c:/Users/HP/Desktop/Code__project__master/OnlineInternship/Project2__Diabetes/Predict_Diabetes/app/prediction/templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diabetes Prediction</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static '/prediction/sugar-blood-level.png' %}" type="image/png">
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: 50px;
+            background-color: rgb(242, 242, 242);
+        }
+        
+        .hero-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        
+        .hero-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-section button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #form-section {
+            margin-top: 50px;
+        }
+        
+        .styled-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+        }
+        
+        .styled-form fieldset {
+            border: none;
+        }
+        
+        .styled-form .form-group {
+            margin-bottom: 10px;
+        }
+        
+        .styled-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .styled-form input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .styled-form .submit-button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .styled-form .submit-button:hover {
+            background-color: #0056b3;
+        }
+        /* Your existing CSS styles */
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="{% static '/prediction/2999_m76m_230224.jpg' %}" height="35px" width="35px" alt="Logo">
+        <h5>Predict Ur Diabetics</h5>
+    </div>
+
+    <div class="hero-section">
+        <img src="{% static '/prediction/sugar-blood-level-hero.png' %}" height="75px" width="75px" style="margin: 0; padding: 0;" alt="Logo">
+        <h1>Hello, let's predict your diabetes!</h1>
+        <button onclick="scrollToForm()">Get Started</button>
+    </div>
+
+    <div id="form-section">
+        <form action="{% url 'result'  %}" method="post" class="styled-form">
+            {% csrf_token %}
+            <fieldset>
+                <legend>
+                    <h1>Enter the following information</h1>
+                </legend>
+
+                <div class="form-group">
+                    <label for="pregnancy">Pregnancy : </label>
+                    <input type="number" step="0.01" name="pregnancy" id="pregnancy" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="glucose">Glucose : </label>
+                    <input type="number" step="0.01" name="glucose" id="glucose" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="bloodp">Blood Pressure : </label>
+                    <input type="number" step="0.01" name="bloodp" id="bloodp" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="skint">Skin Thickness : </label>
+                    <input type="number" step="0.01" name="skint" id="skint" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="insulin">Insulin : </label>
+                    <input type="number" step="0.01" name="insulin" id="insulin" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="bmi">BMI : </label>
+                    <input type="number" step="0.01" name="bmi" id="bmi" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="diabetes">Diabetes Pedigree Function : </label>
+                    <input type="number" step="0.01" name="diabetes" id="diabetes" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age : </label>
+                    <input type="number" name="age" id="age" required />
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit" class="submit-button" required>
+        </form>
+    </div>
+
+    </div>
+
+    <script>
+        function scrollToForm() {
+            document.getElementById("form-section").scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>
