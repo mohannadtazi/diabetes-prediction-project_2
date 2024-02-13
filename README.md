@@ -1,6 +1,6 @@
 # Diabetes Prediction Web App
 
-![Project Image](url_to_project_image.png)
+![Capture](https://github.com/mohannadtazi/diabetes-prediction-project_2/assets/77018169/949621e3-8020-41a2-b811-b14425a6e9b7)
 
 ## Overview
 
