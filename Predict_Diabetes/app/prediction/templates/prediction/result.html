@@ -95,6 +95,20 @@
         .hero-section .hero-button:hover {
             background-color: #45a049;
         }
+           .model-section {
+            margin-top: 50px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .model-section h3 {
+            margin-bottom: 10px;
+        }
+        
+        .model-section p {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 
@@ -104,6 +118,19 @@
         <h2>Result: {{ result }}</h2>
         <a href="{% url 'index' %}" class="hero-button">Predict Again</a>
     </div>
+
+
+    <div class="model-section">
+        <h3>Model Used for Prediction</h3>
+        <p>Logistic Regression</p>
+        <p>Accuracy: 82%</p>
+        <p>Class 0 (Non-diabetic): 88%</p>
+        <p>Class 1 (Diabetic): 61%</p>
+    </div>
+
+
+
+
 </body>
 
 </html>
