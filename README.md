@@ -17,6 +17,7 @@ This web application predicts whether a patient has diabetes based on certain di
 
 [Link to Live Demo](https://www.linkedin.com/posts/mohannad-tazi_django-healthtech-diabetesprediction-activity-7163492963044548609-vRb1?utm_source=share&utm_medium=member_desktop)
 
+[Link to Website](https://mohannadtazi.pythonanywhere.com/)
 ## Installation
 
 1. Clone the repository:
