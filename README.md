@@ -15,7 +15,7 @@ This web application predicts whether a patient has diabetes based on certain di
 
 ## Demo
 
-[Link to Live Demo](url_to_live_demo)
+[Link to Live Demo](https://www.linkedin.com/posts/mohannad-tazi_django-healthtech-diabetesprediction-activity-7163492963044548609-vRb1?utm_source=share&utm_medium=member_desktop)
 
 ## Installation
 
